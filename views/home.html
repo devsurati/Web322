@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="/"
+          >Lego Collection</a
+        >
+      </div>
+
+      <div class="navbar-center hidden sm:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 right-0">
+                <li><a href="/lego/sets?theme=Ducks">Ducks</a></li>
+                <li><a href="/lego/sets?theme=Battery Box">Battery Box</a></li>
+                <li>
+                  <a href="/lego/sets?theme=Two Garage Door Kits">Two Garage Door Kits</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Welcome to the collection!</h1>
+            <p class="py-6">
+              Explore a Vast Collection of Lego Items that suits your kids
+              taste!
+            </p>
+            <a href="lego/sets" class="btn btn-primary"
+              >Click to View Collection</a
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/0756672805-1.jpg"
+              alt="Icons Set"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Pirates: Brickmaster</h2>
+            <p>
+             You can make 16 amazing lego models and is best for kids. There are 75 parts in this inventory, with 153 total quantity. 
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/0756682762-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/0756692571-1.jpg"
+              alt="Basic Set"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Harry Potter: Characters of the Magical World</h2>
+            <p>
+                There are 1 Minifigures in this inventory, with 1 total quantity. Best for the Harry Potter fans.
+
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/0756692571-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/0756668530-1.jpg"
+              alt="Lion Knights"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Atlantis: Brickmaster</h2>
+            <p>There are 72 parts in this inventory, with 148 total quantity. You can make 14 lego models!</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/0756668530-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
