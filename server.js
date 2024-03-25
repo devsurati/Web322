@@ -1,3 +1,17 @@
+/********************************************************************************
+* 
+* WEB322 � Assignment 04
+*
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+*
+* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+*
+* Name: Dev A. Surati        Student ID: 117958223        Date: 2024-03-22
+*
+* Published URL:
+*
+********************************************************************************/
 const legoData = require("./modules/legoSets");
 
 
@@ -6,7 +20,7 @@ const path = require("path");
 const express = require('express');
 const app = express();
 
-const HTTP_PORT = process.env.PORT || 8080;
+const HTTP_PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
