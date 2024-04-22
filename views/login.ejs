@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+  /* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+  background-color: #1a1a2e; /* Updated darker blue background */
+  color: #eaeaea; /* Lighter text color for better contrast */
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card styles */
+.card {
+  background-color: #16213e; /* Dark blue background for card */
+  border-radius: 12px;
+  padding: 45px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 255, 0.2); /* Blue glow shadow */
+  width: 420px;
+}
+
+/* Form styles */
+.form-control {
+  margin-bottom: 25px;
+}
+
+.label-text {
+  font-weight: bold;
+  color: #ccd6f6; /* Softer blue for labels */
+}
+
+.input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #404b69; /* Dark border color */
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  background-color: #0f3460; /* Dark blue input background */
+  color: #ccd6f6; /* Input text color */
+}
+
+.input:focus {
+  border-color: #4caf50; /* Green focus border */
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #e94560; /* Brighter red button */
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #d72323; /* Darker red on hover */
+}
+
+/* Alert styles */
+.alert {
+  background-color: #ffcc29; /* Updated yellow alert */
+  color: #222; /* Dark text for alert */
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.alert-error {
+  background-color: #f44336; /* Deep red error alert */
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+  </style>
+    
+</head>
+<body>
+  <% include('partials/navbar', { page: 'login' }) %>
+  
+  <div class="container mx-auto">
+    <div class="max-w-md mx-auto mt-6">
+      <form action="/login" method="POST" class="card shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Login</h2>
+        <% if(errorMessage) { %>
+          <div class="alert alert-error">
+            <span><%= errorMessage %></span>
+          </div>
+        <% } %>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">User Name</span>
+          </label>
+          <input type="text" name="userName" placeholder="User Name" required class="input">
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" name="password" placeholder="Password" required class="input">
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

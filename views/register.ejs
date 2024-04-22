@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/css/main.css">
+<style>
+  /* Resetting default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7eff6; /* Updated to a cooler bluish-grey */
+  }
+
+  /* Container styles */
+  .container {
+    padding: 25px;
+  }
+
+  /* Navbar styles */
+  .navbar {
+    background-color: #4a69bd; /* Updated to a deep blue */
+    color: #fff;
+    padding: 12px 20px;
+  }
+
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+
+  /* Card styles */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  }
+
+  /* Form styles */
+  .form-control {
+    margin-bottom: 25px;
+  }
+
+  .label-text {
+    font-weight: bold;
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #dee2e6; /* Softer border color */
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+
+  .input:focus {
+    border-color: #4a69bd; /* Match navbar color */
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #78a1bb; /* Softer blue for button */
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #56738f; /* Darker shade for hover */
+  }
+
+  /* Alert styles */
+  .alert {
+    background-color: #ffd5d5; /* Softer red for alert */
+    color: #d63333;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  .success-message {
+    background-color: #d4edda; /* Soft green */
+    color: #155724;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  </style>
+</head>
+<body>
+  <% include('partials/navbar', { page: 'register' }) %>
+  
+  <div class="container mx-auto">
+    <div class="max-w-md mx-auto mt-6">
+      <% if(typeof successMessage !== 'undefined') { %>
+        <div class="success-message">
+          <span><%= successMessage %></span>
+        </div>
+        <a href="/login" class="btn">Proceed to Log in</a>
+      <% } else { %>
+        <form action="/register" method="POST" class="card shadow-md p-6">
+          <h2 class="text-2xl font-semibold mb-4">Register</h2>
+          <% if(typeof errorMessage !== 'undefined') { %>
+            <div class="alert">
+              <span><%= errorMessage %></span>
+            </div>
+          <% } %>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">User Name</span>
+            </label>
+            <input type="text" name="userName" placeholder="User Name" required class="input">
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Password</span>
+            </label>
+            <input type="password" name="password" placeholder="Password" required class="input">
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Confirm Password</span>
+            </label>
+            <input type="password" name="password2" placeholder="Confirm Password" required class="input">
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Email Address</span>
+            </label>
+            <input type="email" name="email" placeholder="Email Address" required class="input">
+          </div>
+          <button type="submit" class="btn">Register</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

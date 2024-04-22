@@ -4,89 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lego Collections</title>
+  <title>Lego Collection</title>
   <link rel="stylesheet" href="/css/main.css" />
 
-  <style>
-    .card {
-        height: 100%;
-        margin: 10px;
-        background-color: rgba(0, 0, 0, 0.1); ;
-    }
-    
-    .card img {
-        height: 200px;
-        object-fit: cover; 
-    }
-
-  </style>
 </head>
 
 <body tabindex="-1">
-    <%- include('partials/navbar', {page:'/home'}) %>
+   <!-- Include navbar partial -->
+   <%- include('partials/navbar', { page: '/home' }) %>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/"></a>
+    </div>
+
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/lego/sets">View Collection</a></li>
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Account</summary>
+            <ul class="p-2 bg-base-100 right-0">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/lego/sets">View Collection</a></li>
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Account</summary>
+            <ul class="p-2 bg-base-100 right-0">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
 
   <div class="container mx-auto">
-      <div class="hero bg-base-200 rounded-lg p-6">
-          <div class="hero-content text-center">
-              <div class="max-w-lg">
-                  <h1 class="text-5xl font-bold">Begin Your Legendary Adventure with Our Lego Assortment</h1>
-                  <p class="py-6">Begin a voyage of imagination and discovery in our extensive LEGO collection, where every brick tells a story and each creation sparks wonder.</p>
-                  <a href="/lego/sets" class="btn btn-primary">Discover Sets</a>
-              </div>
+
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+          <div class="max-w-lg">
+              <h1 class="text-5xl font-bold">Begin Your Legendary Adventure with Our Lego Assortment</h1>
+              <p class="py-6">Begin a voyage of imagination and discovery in our extensive LEGO collection, where every brick tells a story and each creation sparks wonder.</p>
+              <a href="/lego/sets" class="btn btn-primary">Discover Sets</a>
           </div>
       </div>
   </div>
+</div>
+<br>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div>
 
-  <br>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div>
-
-          <div class="card bg-base-100 shadow-xl">
-              <figure>
-              <img class="w-full" src="https://cdn.rebrickable.com/media/sets/066-1.jpg" alt="Lego set - 066-1">
-              </figure>
-              <div class="card-body">
-              <h2 class="card-title">Basic Building Set</h2>
-              <p>Ready to let your creativity bloom? Build a piece of beautiful home decor that includes 8 species of wildflower. The building set provides an immersive building experience for nature-lovers and budding florists.</p>
-                  <div class="card-actions justify-end">
-                          <a href="/lego/sets/066-1" class="btn btn-primary">View</a>
-                  </div>
-              </div>
-
-          </div>
-
-      </div>
-
-      <div>
-        <div class="card bg-base-100 shadow-xl">
-          <figure>
-          <img class="w-full" src="https://cdn.rebrickable.com/media/sets/088-1.jpg" alt="Lego Set 088-1">
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">Super Set</h2>
-            <p>Craft an elegant display for the home or office with the LEGO® Icons Bouquet of Roses building set for adults. Rewind as you craft each meticulous detail and enjoy rearranging the flora to create the perfect look.</p>
-            <div class="card-actions justify-end">
-                <a href="/lego/sets/088-1" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
       <div class="card bg-base-100 shadow-xl">
           <figure>
-          <img class="w-full " src="https://cdn.rebrickable.com/media/sets/1000-1.jpg" alt="Lego Set - 1000-1">
+          <img class="w-full" src="https://cdn.rebrickable.com/media/sets/066-1.jpg" alt="Lego set - 066-1">
           </figure>
           <div class="card-body">
-          <h2 class="card-title">Mosaic Set</h2>
-          <p>Exquisite Gift for Her: Elevate your celebrations with this Flowers Building Set for Adults, a stunning 917 PCS masterpiece. Ideal for Christmas, Mother's Day, or a heartfelt Valentine's gift for her.</p>
+          <h2 class="card-title">Basic Building Set</h2>
+          <p>Ready to let your creativity bloom? Build a piece of beautiful home decor that includes 8 species of wildflower. The building set provides an immersive building experience for nature-lovers and budding florists.</p>
               <div class="card-actions justify-end">
-                  <a href="/lego/sets/1000-1" class="btn btn-primary">View</a>
+                      <a href="/lego/sets/066-1" class="btn btn-primary">View</a>
               </div>
           </div>
       </div>
+  </div>
+  <div>
+    <div class="card bg-base-100 shadow-xl">
+      <figure>
+      <img class="w-full" src="https://cdn.rebrickable.com/media/sets/088-1.jpg" alt="Lego Set 088-1">
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Super Set</h2>
+        <p>Craft an elegant display for the home or office with the LEGO® Icons Bouquet of Roses building set for adults. Rewind as you craft each meticulous detail and enjoy rearranging the flora to create the perfect look.</p>
+        <div class="card-actions justify-end">
+            <a href="/lego/sets/088-1" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+  <div class="card bg-base-100 shadow-xl">
+      <figure>
+      <img class="w-full " src="https://cdn.rebrickable.com/media/sets/1000-1.jpg" alt="Lego Set - 1000-1">
+      </figure>
+      <div class="card-body">
+      <h2 class="card-title">Mosaic Set</h2>
+      <p>Exquisite Gift for Her: Elevate your celebrations with this Flowers Building Set for Adults, a stunning 917 PCS masterpiece. Ideal for Christmas, Mother's Day, or a heartfelt Valentine's gift for her.</p>
+          <div class="card-actions justify-end">
+              <a href="/lego/sets/1000-1" class="btn btn-primary">View</a>
+          </div>
       </div>
   </div>
+  </div>
+</div>
 </body>
 </html>
